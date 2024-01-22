@@ -29,8 +29,17 @@ namespace ConsoleApp12
                     result = num1 * num2;
                     break;
                 case '/':
+                    if (num2 != 0)
                     result = num1 / num2;
-                    break;
+                else
+                {
+                    Console.WriteLine("Ошибка: деление на ноль!");
+                    return;
+                }
+                break;
+                default:
+                Console.WriteLine("Ошибка: неверная операция.");
+                return;
             }
             Console.WriteLine($"Результат операции: {result}");
             Console.ReadKey();
